@@ -1,17 +1,13 @@
 import Navbar from '@/components/layout/navbar'
 import Footer from '@/components/layout/footer'
-import Hero from '@/components/sections/hero'
-import Details from '@/components/sections/details'
-import Prizes from '@/components/sections/prizes'
+import RegistrationForm from '@/components/forms/registration-form'
 
-export default function Home() {
+export default function FormPage() {
   return (
     <div className="flex flex-col min-h-screen">
       <Navbar />
       <main className="flex-1">
-        <Hero />
-        <Details />
-        <Prizes />
+        <RegistrationForm />
       </main>
       <Footer />
     </div>
