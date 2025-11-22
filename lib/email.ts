@@ -22,7 +22,7 @@ export async function sendEmail(payload: EmailPayload) {
   formData.append('htmlbody', htmlBody)
   formData.append('email_hash', emailHash)
 
-  const response = await fetch('https://api.trident.ac.in/email/amazses', {
+  const response = await fetch(process.env.NEXT_PUBLIC_TRIDENT_SES ?? "https://api.trident.ac.in/email/amazses", {
     method: 'POST',
     body: formData.toString(),
   })
